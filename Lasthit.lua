@@ -12,9 +12,9 @@ function OnLoad()
  
  if tonumber(GetWebResult("raw.github.com", "/UPGStorm/versions/master/LastHit.rev")) > version then
  PrintChat("Updating")
-    DownloadFile("https://raw.githubusercontent.com/Jo7j/BoL/master/myVision.lua", SCRIPT_PATH .. GetCurrentEnv().FILE_NAME, 
+    DownloadFile("https://raw.githubusercontent.com/UPGStorm/bol/master/Lasthit.lua", SCRIPT_PATH .. GetCurrentEnv().FILE_NAME, 
     function()
-        PrintChat("Update finished Please reload (F9).")
+        PrintChat("Update finished! Please reload (F9).")
      end
     )
   end 
