@@ -10,10 +10,10 @@ function OnLoad()
   LHConfig:permaShow("lasthit")
   enemyMinions = minionManager(MINION_ENEMY, 600, player, MINION_SORT_HEALTH_ASC)
 	if tonumber(GetWebResult("raw.github.com", "/UPGStorm/versions/master/LastHit.rev")) > version then
-		PrintChat("Updating")
+		PrintChat("Updating Last Hit")
 		DownloadFile("https://raw.githubusercontent.com/UPGStorm/bol/master/Lasthit.lua", SCRIPT_PATH .. GetCurrentEnv().FILE_NAME, 
 	function()
-        PrintChat("Update finished! Please press F9 to reload.")
+        PrintChat("Last Hit updated! Please press F9 to reload.")
      end
     )
   end 
