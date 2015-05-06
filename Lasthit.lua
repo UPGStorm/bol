@@ -1,7 +1,7 @@
 local player = GetMyHero()
 local tick = 0
 local delay = 400
-local version = 2.0
+local version = 1.0
   
 function OnLoad()
   PrintChat("<font color='#7FFF00'> Last Hit loaded! </font>")
