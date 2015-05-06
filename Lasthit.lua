@@ -1,7 +1,7 @@
 local player = GetMyHero()
 local tick = 0
 local delay = 400
-local version = 2.0
+local version = 1.0
   
 function OnLoad()
   PrintChat("<font color='#7FFF00'> Last Hit loaded! </font>")
@@ -9,11 +9,10 @@ function OnLoad()
   LHConfig:addParam("lasthit", "Last Hit for me", SCRIPT_PARAM_ONKEYDOWN, false, 32)
   LHConfig:permaShow("lasthit")
   enemyMinions = minionManager(MINION_ENEMY, 600, player, MINION_SORT_HEALTH_ASC)
- 
- if tonumber(GetWebResult("raw.github.com", "/UPGStorm/versions/master/LastHit.rev")) > version then
- PrintChat("Updating")
-    DownloadFile("https://raw.githubusercontent.com/UPGStorm/bol/master/Lasthit.lua", SCRIPT_PATH .. GetCurrentEnv().FILE_NAME, 
-    function()
+	if tonumber(GetWebResult("raw.github.com", "/UPGStorm/versions/master/LastHit.rev")) > version then
+		PrintChat("Updating")
+		DownloadFile("https://raw.githubusercontent.com/UPGStorm/bol/master/Lasthit.lua", SCRIPT_PATH .. GetCurrentEnv().FILE_NAME, 
+	function()
         PrintChat("Update finished! Please reload (F9).")
      end
     )
