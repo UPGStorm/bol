@@ -6,7 +6,7 @@ local version = 1.0
 function OnLoad()
   PrintChat("<font color='#7FFF00'> Last Hit loaded! </font>")
   LHConfig = scriptConfig("Last Hit v1.0", "LastHit")
-  LHConfig:addParam("lasthit", "Last Hit for me", SCRIPT_PARAM_ONKEYDOWN, false, 32)
+  LHConfig:addParam("lasthit", "Last Hit", SCRIPT_PARAM_ONKEYDOWN, false, 32)
   LHConfig:permaShow("lasthit")
   enemyMinions = minionManager(MINION_ENEMY, 600, player, MINION_SORT_HEALTH_ASC)
 	if tonumber(GetWebResult("raw.github.com", "/UPGStorm/versions/master/LastHit.rev")) > version then
